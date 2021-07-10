@@ -1,14 +1,14 @@
 <template>
   <div class="w-screen h-5/6 bg-gray-50">
     <div class="w-full h-28 flex justify-center items-center">
-      <form @submit.prevent="addDetails" class="w-7/12 flex justify-center space-x-2">
-          <input type="text" required placeholder="Description" class="w-2/5 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="description">
-          <input type="number" required placeholder="Value" class="w-2/5 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="value">
-          <input type="date" required placeholder="dd/mm/yy" min="2020-01-01" max="2025-12-31" class="w-2/6 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="date">
-          <input type="submit" value="Submit" class="w-1/5 h-10 bg-indigo-800 text-white">
+      <form @submit.prevent="addDetails" class="w-full md:w-7/12 lg:w-7/12 flex justify-center space-x-2">
+          <input type="text" required placeholder="Description" class="w-full lg:w-2/5 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="description">
+          <input type="number" required placeholder="Value" class="w-full lg:w-2/5 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="value">
+          <input type="date" required placeholder="dd/mm/yy" min="2020-01-01" max="2025-12-31" class="w-full lg:w-2/6 h-10 pl-3 border border-gray-200 focus:outline-none" v-model="date">
+          <input type="submit" value="Submit" class="w-full lg:w-1/5 h-10 bg-indigo-800 text-white">
       </form>
     </div>
-    <div class="w-7/12 mx-auto">
+    <div class="w-full md:w-7/12 lg:w-7/12 mx-auto">
       <div class="w-full relative top-10">
         <div v-for="detail in details" :key="detail.id" class="w-full py-2 bg-white rounded-xl flex justify-between items-center border border-gray-200 mb-5"> 
           <div class="w-full h-full text-gray-500 text-lg font-thin ml-3">
